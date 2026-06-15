@@ -44,3 +44,6 @@ function updateHighScore() {
     localStorage.setItem("highScore", highScore);
   }
 }
+
+document.getElementById("highScoreText").textContent =
+  "High Score: " + (localStorage.getItem("highScore") || 0);
