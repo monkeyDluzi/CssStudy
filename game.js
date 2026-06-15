@@ -3,6 +3,8 @@ const catchMeButton = document.getElementById("catchMeButton")
 
 
 function move() {
-  left: 300px;
-  top: 300px;
+catchMeButton.style.left = "600px";
+ catchMeButton.style.top = "600px";
 }
+catchMeButton.addEventListener("click", function();
+  
