@@ -12,9 +12,31 @@
 </head>
   
 <body>
- 
   <button onclick="move()" id="catchMeButton">Catch Me!</button>
+  <style>
+#centeredButton {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+
+  background: linear-gradient(to bottom, purple, black);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px gray;
+
+  transition: 0.3s;
+}
+    </style>
 
   <script  src="./game.js"></script>
 </body>
