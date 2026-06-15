@@ -1,9 +1,11 @@
 const catchMeButton = document.getElementById("catchMeButton");
 
 function move() {
-  catchMeButton.style.left = "300px";
-  catchMeButton.style.top = "300px";
+  const x = Math.random() * (window.innerWidth - catchMeButton.offsetWidth);
+  const y = Math.random() * (window.innerHeight - catchMeButton.offsetHeight);
+
+  catchMeButton.style.left = `${x}px`;
+  catchMeButton.style.top = `${y}px`;
 }
 
-catchMeButton.addEventListener("click", move);;
-  
+catchMeButton.addEventListener("click", move);
