@@ -29,3 +29,10 @@ document.addEventListener("mousemove", (e) => {
     catchMeButton.style.top = newTop + "px";
   }
 });
+
+let score = 0;
+
+catchMeButton.addEventListener("click", () => {
+  score++;
+  document.getElementById("score").textContent = "Score: " + score;
+});
