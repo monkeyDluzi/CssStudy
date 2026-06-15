@@ -36,3 +36,11 @@ catchMeButton.addEventListener("click", () => {
   score++;
   document.getElementById("score").textContent = "Score: " + score;
 });
+let highScore = localStorage.getItem("highScore") || 0;
+
+function updateHighScore() {
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+  }
+}
