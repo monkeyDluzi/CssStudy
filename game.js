@@ -12,10 +12,20 @@ document.addEventListener("mousemove", (e) => {
   const distance = Math.sqrt(dx * dx + dy * dy);
 
   if (distance < 120) {
-    catchMeButton.style.left =
-      catchMeButton.offsetLeft + dx * 2 + "px";
+    let newLeft = catchMeButton.offsetLeft + dx * 2;
+    let newTop = catchMeButton.offsetTop + dy * 2;
 
-    catchMeButton.style.top =
-      catchMeButton.offsetTop + dy * 2 + "px";
+    newLeft = Math.max(
+      0,
+      Math.min(window.innerWidth - catchMeButton.offsetWidth, newLeft)
+    );
+
+    newTop = Math.max(
+      0,
+      Math.min(window.innerHeight - catchMeButton.offsetHeight, newTop)
+    );
+
+    catchMeButton.style.left = newLeft + "px";
+    catchMeButton.style.top = newTop + "px";
   }
 });
