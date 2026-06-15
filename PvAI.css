@@ -27,4 +27,13 @@
       width: 200px;
       height: 100px;
     }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("200.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
     
