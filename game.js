@@ -13,9 +13,9 @@ document.addEventListener("mousemove", (e) => {
 
   if (distance < 120) {
     catchMeButton.style.left =
-      catchMeButton.offsetLeft + dx * 0.2 + "px";
+      catchMeButton.offsetLeft + dx * 2 + "px";
 
     catchMeButton.style.top =
-      catchMeButton.offsetTop + dy * 0.2 + "px";
+      catchMeButton.offsetTop + dy * 2 + "px";
   }
 });
