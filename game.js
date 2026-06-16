@@ -48,3 +48,14 @@ catchMeButton.addEventListener("click", () => {
   }
 });
 
+
+newLeft = Math.max(
+  0,
+  Math.min(1000 - catchMeButton.offsetWidth, newLeft)
+);
+
+newTop = Math.max(
+  0,
+  Math.min(600 - catchMeButton.offsetHeight, newTop)
+);
+
