@@ -38,3 +38,21 @@ body {
 #highScoreText {
   color: white;
 }
+
+#back {
+  position: absolute;
+  left: 600px;
+  top: 890px;
+
+  width: 200px;
+  height: 100px;
+
+  font-size: 24px;
+  color: white;
+
+  background: linear-gradient(to left, blue, white);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px gray;
+
+  transition: 0.3s;
+}
