@@ -58,7 +58,7 @@ catchMeButton.addEventListener("click", () => {
   }, 200);
 });
 
- const catchMeButton = document.getElementById("catchMeButton");
+const catchMeButton = document.getElementById("catchMeButton");
 const arena = document.getElementById("arena");
 
 let x = 250;
@@ -67,17 +67,48 @@ let y = 300;
 let speedX = 4;
 let speedY = 3;
 
+document.addEventListener("mousemove", (e) => {
+  const rect = catchMeButton.getBoundingClientRect();
+
+  const buttonX = rect.left + rect.width / 2;
+  const buttonY = rect.top + rect.height / 2;
+
+  const dx = buttonX - e.clientX;
+  const dy = buttonY - e.clientY;
+
+  const distance = Math.sqrt(dx * dx + dy * dy);
+
+  if (distance < 150) {
+    // push away instead of teleport
+    speedX += dx * 0.05;
+    speedY += dy * 0.05;
+  }
+});
+
 function animate() {
   x += speedX;
   y += speedY;
 
-  // Left or right wall
-  if (x <= 0 || x >= arena.clientWidth - catchMeButton.offsetWidth) {
+  // friction (prevents infinite speed buildup)
+  speedX *= 0.99;
+  speedY *= 0.99;
+
+  // wall bounce
+  if (x <= 0) {
+    x = 0;
+    speedX *= -1;
+  }
+  if (x >= arena.clientWidth - catchMeButton.offsetWidth) {
+    x = arena.clientWidth - catchMeButton.offsetWidth;
     speedX *= -1;
   }
 
-  // Top or bottom wall
-  if (y <= 0 || y >= arena.clientHeight - catchMeButton.offsetHeight) {
+  if (y <= 0) {
+    y = 0;
+    speedY *= -1;
+  }
+  if (y >= arena.clientHeight - catchMeButton.offsetHeight) {
+    y = arena.clientHeight - catchMeButton.offsetHeight;
     speedY *= -1;
   }
 
@@ -88,3 +119,5 @@ function animate() {
 }
 
 animate();
+
+
