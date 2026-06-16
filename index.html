@@ -63,6 +63,36 @@ body {
 
   transition: 0.3s;
 }
+#shop:hover {
+transform: translate(-50%, -50%) scale(1.2);
+}
+
+   #update/credits {
+  position: absolute;
+  left: 50%;
+  top: 400px;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+
+  background: linear-gradient(to top, red, black, red);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px gray;
+
+  transition: 0.3s;
+}
+#update/credits:hover {
+transform: translate(-50%, -50%) scale(1.2);
+}
+  
 </style>
 </head>
 
@@ -73,7 +103,7 @@ body {
 <audio id="music" src="IMA ACT A DAMN FOOL.mp3" loop></audio>
 
 <button id="playMusic">Play Music</button>
-
+<a href="update/credits.html" id="update">update/credits</a>
 <script>
 const music = document.getElementById("music");
 
