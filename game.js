@@ -59,3 +59,26 @@ newTop = Math.max(
   Math.min(600 - catchMeButton.offsetHeight, newTop)
 );
 
+let highScore = localStorage.getItem("highScore");
+
+if (highScore === null) {
+  highScore = 0;
+} else {
+  highScore = Number(highScore);
+}
+
+document.getElementById("highScoreText").textContent =
+  "High Score: " + highScore;
+
+catchMeButton.addEventListener("click", () => {
+  score++;
+
+  document.getElementById("score").textContent = "Score: " + score;
+
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+    document.getElementById("highScoreText").textContent =
+      "High Score: " + highScore;
+  }
+});
