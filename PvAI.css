@@ -7,6 +7,15 @@ body {
   background-repeat: no-repeat;
 }
 
+#arena {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  border: 4px solid white;
+  overflow: hidden;
+}
+
 #catchMeButton {
   position: absolute;
   left: 250px;
@@ -14,9 +23,7 @@ body {
 
   width: 200px;
   height: 100px;
-  line-height: 100px;
 
-  text-align: center;
   font-size: 24px;
   color: white;
 
@@ -25,13 +32,5 @@ body {
   box-shadow: 5px 5px 10px gray;
 
   transition: 0.3s;
-}
-#arena {
-  position: relative;
-  width: 1000px;
-  height: 600px;
-  margin: auto;
-  border: 4px solid white;
-  overflow: hidden;
 }
     
