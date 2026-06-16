@@ -58,6 +58,9 @@ catchMeButton.addEventListener("click", () => {
   }, 200);
 });
 
+ const catchMeButton = document.getElementById("catchMeButton");
+const arena = document.getElementById("arena");
+
 let x = 250;
 let y = 300;
 
@@ -77,3 +80,11 @@ function animate() {
   if (y <= 0 || y >= arena.clientHeight - catchMeButton.offsetHeight) {
     speedY *= -1;
   }
+
+  catchMeButton.style.left = x + "px";
+  catchMeButton.style.top = y + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
