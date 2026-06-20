@@ -8,110 +8,92 @@
 body {
   margin: 0;
   min-height: 100vh;
+
   background-image: url("gif/peak.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#centeredButton,
+#shop,
+#update,
+#playMusic {
+  width: 250px;
+  height: 70px;
+
+  border: none;
+  border-radius: 15px;
+
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 70px;
+
+  box-shadow: 5px 5px 10px gray;
+
+  transition: 0.3s;
+}
 
 #centeredButton {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  display: inline-block;
-  width: 200px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-
   background: linear-gradient(to bottom, yellow, orange, red);
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px gray;
-
-  transition: 0.3s;
 }
 
-#centeredButton:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-}
-   #shop {
-  position: absolute;
-  left: 50%;
-  top: 500px;
-  transform: translate(-50%, -50%);
-
-  display: inline-block;
-  width: 200px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-
+#shop {
   background: linear-gradient(to top, yellow, orange, red);
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px gray;
-
-  transition: 0.3s;
-}
-#shop:hover {
-transform: translate(-50%, -50%) scale(1.2);
 }
 
-   #update {
-  position: absolute;
-  left: 50%;
-  top: 600px;
-  transform: translate(-50%, -50%);
-
-  display: inline-block;
-  width: 200px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-
+#update {
   background: linear-gradient(to top, red, black, red);
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px gray;
+}
 
-  transition: 0.3s;
+#playMusic {
+  background: linear-gradient(to bottom, purple, pink);
+  cursor: pointer;
 }
-#update:hover {
-transform: translate(-50%, -50%) scale(1.2);
+
+#centeredButton:hover,
+#shop:hover,
+#update:hover,
+#playMusic:hover {
+  transform: scale(1.1);
 }
-  
 </style>
 </head>
 
 <body>
 
-<a href="game.html" id="centeredButton">Play</a>
+<div id="menu">
+  <a href="game.html" id="centeredButton">Play</a>
+
+  <button id="shop">Shop (Soon)</button>
+
+  <a href="updatecredits.html" id="update">Update/Credits</a>
+
+  <button id="playMusic">Play Music</button>
+</div>
 
 <audio id="music" src="songs/IMA ACT A DAMN FOOL.mp3" loop></audio>
 
-<button id="playMusic">Play Music</button>
-<a href="updatecredits.html" id="update">update/credits</a>
 <script>
 const music = document.getElementById("music");
 
-document.getElementById("playMusic").addEventListener("click", function() {
+document.getElementById("playMusic").addEventListener("click", function () {
   music.play();
 });
 </script>
-  <button id="shop">shop(soon)</button>
+
 </body>
 </html>
 
