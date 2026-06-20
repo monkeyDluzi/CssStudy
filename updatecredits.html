@@ -3,57 +3,57 @@
 
 <head>
   <title>Thanks</title>
-<link rel="icon" href="image/cursorB1.jpg">
+  <link rel="icon" href="image/cursorB1.jpg">
+
   <style>
     body {
       margin: 0;
       min-height: 100vh;
+
       background-image: url("image/cool67.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
       color: white;
       font-family: Arial, sans-serif;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* Titles */
-    #thanks {
-      position: absolute;
-      left: 110px;
-      top: 250px;
+    /* Main content */
+    #container {
+      width: 90%;
+      max-width: 1400px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+
+      margin-top: 150px;
     }
 
-    #update {
-      position: absolute;
-      left: 1000px;
-      top: 250px;
+    .section {
+      width: 45%;
     }
 
-    /* Text */
-    #thanksword {
-      position: absolute;
-      left: 110px;
-      top: 330px;
-      width: 350px;
-      font-size: 20px;
-      line-height: 1.5;
+    .section h1 {
+      font-size: 48px;
+      text-align: center;
     }
 
-    #updateword {
-      position: absolute;
-      left: 1000px;
-      top: 330px;
-      width: 350px;
-      font-size: 20px;
-      line-height: 1.5;
+    .section p {
+      font-size: 22px;
+      line-height: 1.6;
+      text-align: center;
     }
 
     /* Back button */
     #back {
-      position: absolute;
-      left: 50%;
-      bottom: 50px;
-      transform: translateX(-50%);
+      margin-top: 100px;
+      margin-bottom: 50px;
 
       width: 200px;
       height: 60px;
@@ -64,6 +64,7 @@
       color: white;
 
       background: linear-gradient(to bottom, blue, purple);
+
       border-radius: 15px;
       box-shadow: 5px 5px 10px gray;
 
@@ -71,45 +72,48 @@
     }
 
     #back:hover {
-      transform: translateX(-50%) scale(1.1);
+      transform: scale(1.1);
     }
   </style>
 </head>
 
 <body>
 
-  <h1 id="thanks">Thanks Guys</h1>
+  <div id="container">
 
-  <h1 id="update">Update 0</h1>
+    <div class="section">
+      <h1>Thanks Guys</h1>
 
-  <p id="thanksword">
-    Thank you Emir, Santi, ChatGPT, and my small brain cells.<br><br>
+      <p>
+        Thank you Emir, Santi, ChatGPT, and my small brain cells.<br><br>
 
-    Emir, you gave me the idea to break my number 1 bug.<br><br>
+        Emir, you gave me the idea to break my number 1 bug.<br><br>
 
-    Santi, you taught me workflow, JavaScript, CSS, and HTML.<br><br>
+        Santi, you taught me workflow, JavaScript, CSS, and HTML.<br><br>
 
-    ChatGPT, you taught me how code works and most of everything I know.<br><br>
+        ChatGPT, you taught me how code works and most of everything I know.<br><br>
 
-    My brain cells, thank you for understanding everything.
-  </p>
+        My brain cells, thank you for understanding everything.
+      </p>
+    </div>
 
-  <p id="updateword">
-    I added PvAI. You can fight an AI and your task is to catch a button.<br><br>
+    <div class="section">
+      <h1>Update 0</h1>
 
-    Next update I'll be adding a 30 second timer and to it a wins system.<br><br>
+      <p>
+        I added PvAI. You can fight an AI and your task is to catch a button.<br><br>
 
-    I'll also try to add a notification system so players know when the game updates.
+        Next update I'll be adding a 30 second timer and a wins system.<br><br>
 
-    Maybe a leaderboard idk for most wins
-  </p>
+        I'll also try to add a notification system so players know when the game updates.<br><br>
+
+        Maybe a leaderboard for most wins.
+      </p>
+    </div>
+
+  </div>
 
   <a href="index.html" id="back">Back</a>
 
 </body>
-
 </html>
-
-
-    
-  </html>
