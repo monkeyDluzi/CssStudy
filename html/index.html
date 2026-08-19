@@ -81,16 +81,23 @@ body {
 
   <a href="html/updatecredits.html" id="update">Update/Credits</a>
 
-  <button id="playMusic">Play Music</button>
+  <button id="playMusic">Play/pause Music</button>
 </div>
 
 <audio id="music" src="songs/gr0za-car-edit-editing-music-503357.mp3" loop></audio>
 
 <script>
 const music = document.getElementById("music");
+const playMusic = document.getElementById("playMusic");
 
-document.getElementById("playMusic").addEventListener("click", function () {
-  music.play();
+playMusic.addEventListener("click", function () {
+    if (music.paused) {
+        music.play();
+        playMusic.textContent = "Pause Music";
+    } else {
+        music.pause();
+        playMusic.textContent = "Play Music";
+    }
 });
 </script>
 
