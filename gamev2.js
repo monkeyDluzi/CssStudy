@@ -1,4 +1,4 @@
-const catchMeButton = document.getElementById("catchMeButtonv2");
+const catchMeButtonv2 = document.getElementById("catchMeButtonv2");
 const arena = document.getElementById("arenav2");
 
 let score = 0;
@@ -19,7 +19,7 @@ let speedY = 7;
 
 // mouse repulsion (ONLY ONE mouse listener)
 document.addEventListener("mousemove", (e) => {
-  const rect = catchMeButton.getBoundingClientRect();
+  const rect = catchMeButtonv2.getBoundingClientRect();
 
   const buttonX = rect.left + rect.width / 2;
   const buttonY = rect.top + rect.height / 2;
@@ -76,13 +76,13 @@ catchMeButtonv2.addEventListener("click", () => {
   canScore = false;
 
   score++;
-  document.getElementById("score").textContent = "Score: " + score;
+  document.getElementById("scorev2").textContent = "Scorev2: " + score;
 
   if (score > highScore) {
     highScore = score;
-    localStorage.setItem("highScore", highScore);
+    localStorage.setItem("highScorev2", highScore);
 
-    document.getElementById("highScoreText").textContent =
+    document.getElementById("highScoreTextv2").textContent =
       "High Score: " + highScore;
   }
 
