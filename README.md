@@ -1,4 +1,4 @@
-going from a css study file its end goal is just to fill space in this mac but it slowly it transformed into a passion project i hope anyone who comes across this enjoys my litte game 
+going from a css study file its end goal was just to fill space on this Mac, but it slowly transformed into a passion project i hope anyone who comes across this enjoys my little game 
 
 
 
